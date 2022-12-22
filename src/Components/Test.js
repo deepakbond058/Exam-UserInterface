@@ -195,7 +195,7 @@ function Test(props) {
                 <>
                 <Navbar examState={setexamState} timerStart={props.timerStart}/>
                 <div className='container my-3'>
-                 <div style={{height:"30vh"}}>
+                 <div >
                 <div>
                     <b>Q{`${id + 1}`}</b> . {book.questionBank[id].question}
                 </div>
@@ -226,10 +226,10 @@ function Test(props) {
                 </div>   
 
 
-            <div className='d-flex justify-content-evenly mt-3'>
+            <div className='d-flex flex-row mt-5 justify-content-center'>
                 <ul className="pagination">
                     <li className="page-item">
-                        <button disabled={id <= 0} className="page-link" onClick={onPrevious}>Save & Previous</button>
+                        <button disabled={id <= 0} className="page-link" onClick={onPrevious}>&laquo; Save</button>
                     </li>
                     <li className="page-item"><button className="page-link" >{id < 1 ? "  " : id}</button></li>
                     <li className="page-item active" aria-current="page">
@@ -237,10 +237,12 @@ function Test(props) {
                     </li>
                     <li className="page-item"><button className="page-link">{id >= 9 ? "  " : id + 2}</button></li>
                     <li className="page-item">
-                        <button disabled={id >= 9} className="page-link" onClick={onNext}>Save & Next</button>
+                        <button disabled={id >= 9} className="page-link" onClick={onNext}>Save &raquo;</button>
                     </li>
-            <button type="button" className="btn btn btn-success mx-3" onClick={onExamend}>Submit Assesment</button>
                 </ul>
+            </div>
+            <div className='d-flex justify-content-center my-2'>
+                <button type="button" className="btn btn btn-success mx-3" onClick={onExamend}>Submit Assesment</button>
             </div>
          
             <div className='mt-3'>
