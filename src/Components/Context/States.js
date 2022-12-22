@@ -20,6 +20,7 @@ function States(props) {
             minutes: Math.floor(timer / 60000),
             seconds: Math.trunc((Math.floor(timer % 60000)) / 1000),
         });
+        // eslint-disable-next-line
     }, [timer])
 
 
@@ -28,6 +29,7 @@ function States(props) {
             clearInterval(intervalId);
             setexamState(false);
         }
+        // eslint-disable-next-line
     }, [timeLeft])
 
     const clearTimer=()=>{

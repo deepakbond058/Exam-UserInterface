@@ -165,6 +165,7 @@ function Test(props) {
         }
         
         saveAnswer();
+        // eslint-disable-next-line
     }, [id])
 
     useEffect(() => {
@@ -181,6 +182,7 @@ function Test(props) {
             }
         }
         setResult({correct:correct,wrong:wrong,unattempted:unattempted});
+        // eslint-disable-next-line
     }, [userAnswers])
     
 
